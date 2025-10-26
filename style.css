@@ -1,0 +1,101 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #7c9ed1;
+    color: #313131;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background-color: #a6afdc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    padding: 25px;
+    text-align: center;
+}
+
+h1 {
+    color: #022346;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    min-height: 50px; /* Garante altura mínima para a pergunta */
+}
+
+/* Botões de Resposta */
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #f8f9fa;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+/* Classes de feedback adicionadas via JS */
+.btn.correct {
+    background-color: #1eeb4e;
+    border-color: #098025;
+    color: #023b10;
+    font-weight: bold;
+}
+
+.btn.incorrect {
+    background-color: #f1616d;
+    border-color: #d96a75;
+    color: #151313;
+    font-weight: bold;
+}
+
+/* Desabilita o clique após a seleção */
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Botões de Navegação */
+#next-btn, #restart-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+#next-btn:hover, #restart-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Classe utilitária para esconder elementos */
+.hide {
+    display: none;
+}
